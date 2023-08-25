@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBook, faHeart , faCircleDown, } from '@fortawesome/free-solid-svg-icons'
-export default function BookBox() {
+export default function BookBox(props) {
   return (
    <>
    
@@ -13,7 +13,7 @@ export default function BookBox() {
 
 <div className='  h-[100%] w-[100%] flex flex-col justify-center items-center gap-3'>
   
-  <p className='text-center text-[1.6vw]'>Book Name</p>
+  <p className='text-center text-[1.5vw]'>{props.name}</p>
   <FontAwesomeIcon icon={faBook} className='text-[8vw] text-[#AF1B3F]'/></div>  
 </div> 
 
