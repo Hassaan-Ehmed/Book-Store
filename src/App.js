@@ -10,6 +10,7 @@ import Advanture from './pages/Advanture';
 import Self_Dev from './pages/Self_Dev';
 
 import Home from './pages/Home';
+import User from './pages/User';
 
 
 function App() {
@@ -40,6 +41,12 @@ function App() {
 
 <Route path="/Self-Dev" element={<Self_Dev/>}/>
 
+{/* Dynamic Routes */}
+<Route path="/user/:name" element={<User/> }/>
+
+{/* IF any routes above are not matched so below one is Rendered !  */}
+
+<Route path="*" element={<h1 className='text-6xl text-center p-52'>PAGE NOT FOUND : 404 </h1>}/>
 
 
 </Routes>

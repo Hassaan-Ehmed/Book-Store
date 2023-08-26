@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navagation() {
+  
+  
+  const abcd128 = "Hamza Khan";
+  
   return (
     <>
     
@@ -15,6 +19,8 @@ export default function Navagation() {
 <li  className='text-[1.3vw] font-medium cursor-pointer'><Link to="/Sci-Fi">Sci-Fi</Link></li>
 <li  className='text-[1.3vw] font-medium cursor-pointer'><Link to="/Advanture">Advanture</Link></li>
 <li  className='text-[1.3vw] font-medium cursor-pointer'><Link to="/Self-Dev">Self Development</Link></li>
+{/* Dynamic Route in React JS */}
+<li  className='text-[1.3vw] font-medium cursor-pointer'><Link to={`/user/${abcd128}`}>User</Link></li>
 
 </ul>
 
