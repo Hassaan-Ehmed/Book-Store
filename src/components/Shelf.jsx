@@ -1,14 +1,32 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import BookBox from './BookBox'
-import { Names } from './TextContent'
+import { ContextStore } from '../context/Store';
 export default function Shelf(props) {
+  const topic_name = props.topic ;
+ 
+  const store = useContext(ContextStore);
+
+  // const [searchItem,setSearchItem] = useState([topic_name]);
+ 
  
 
-  const topic_name = props.topic 
+  const searchItem =  topic_name.filter((item)=>{
+    
+      if(store.searchText == ""){
+      
+        return true;      
+      }
+      else if((item.toLowerCase()).includes(store.searchText.toLowerCase())){
+        
+        return item;
+
+
+      }      
+      })
+    
+
   return (
 
-
-    
     <>
     
     {/* Main Section */}
@@ -18,14 +36,19 @@ export default function Shelf(props) {
 {/* Parent */}
 <div className='bg-white h-[100%] w-[80%] p-4 flex justify-evenly gap-6 items-center flex-wrap shadow-md'>
 
-{topic_name.map(( _ , index )=>(
-<BookBox name={topic_name[index]}/>
-))}
+{searchItem.map((_,index)=>(
+
+<BookBox name={searchItem[index]}/>
+
+))
+
+}
+{store.setSearchText("")}
 
 </div>
 
     </div>
-    
+   
     
     </>
   )

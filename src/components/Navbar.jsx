@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart , faUser,faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import Navagation from './Navagation';
-
-
-
+import { ContextStore } from '../context/Store';
 
 export default function Navbar() {
+
+  const store = useContext(ContextStore)
+  
+const [text,setText] = useState("");
+
   return (
    <>
 
@@ -25,8 +28,16 @@ export default function Navbar() {
 
 
 <div className="child2 w-[35%] flex justify-center items-center gap-1">
-    <input type="text"  className='w-[100%] text-lg py-[2px] focus:border-none rounded-l-md outline-none relative'/>
-    <div className='bg-white mr-2 py-[2px] px-[5px] rounded-r-md'><FontAwesomeIcon className='text-2xl cursor-pointer active:translate-y-[1px]' icon={faMagnifyingGlass} /></div>
+    <input type="text"  className='w-[100%] text-lg py-[2px] focus:border-none rounded-l-md outline-none relative'
+        
+        onChange={(e)=>{setText(e.target.value)}}
+
+    />
+    <div className='bg-white mr-2 py-[2px] px-[5px] rounded-r-md'><FontAwesomeIcon className='text-2xl cursor-pointer active:translate-y-[1px]' icon={faMagnifyingGlass} 
+    
+onClick={()=>{store.setSearchText(text)}}
+    
+    /></div>
 </div>
 
 <div className="child3 w-[32vw] h-[100%] flex justify-center items-center gap-5 ">
