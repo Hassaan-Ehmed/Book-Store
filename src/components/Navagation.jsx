@@ -1,12 +1,16 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { Link } from 'react-router-dom';
+import { ContextStore } from '../context/Store';
 
 export default function Navagation() {
   
   
   const abcd128 = "Hamza Khan";
+  const store = useContext(ContextStore);
   
   return (
+
+
     <>
     
     <div className='bg-[#FFFDD0] border-b-slate-50 shadow-md w-[100%] h-[4.5vh]  flex justify-start items-center'>

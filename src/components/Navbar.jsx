@@ -28,14 +28,14 @@ const [text,setText] = useState("");
 
 
 <div className="child2 w-[35%] flex justify-center items-center gap-1">
-    <input type="text"  className='w-[100%] text-lg py-[2px] focus:border-none rounded-l-md outline-none relative'
+    <input type="text" value={text}  className='w-[100%] text-lg py-[2px] focus:border-none rounded-l-md outline-none relative'
         
         onChange={(e)=>{setText(e.target.value)}}
 
     />
     <div className='bg-white mr-2 py-[2px] px-[5px] rounded-r-md'><FontAwesomeIcon className='text-2xl cursor-pointer active:translate-y-[1px]' icon={faMagnifyingGlass} 
     
-onClick={()=>{store.setSearchText(text)}}
+onClick={function(){store.setSearchText(text);setText("")}}
     
     /></div>
 </div>
