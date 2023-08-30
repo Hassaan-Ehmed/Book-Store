@@ -1,16 +1,18 @@
-import React, { StrictMode, useContext, useEffect, useState } from 'react'
-import BookBox from './BookBox'
+import React, {  useContext, useEffect, useState } from 'react'
+import BookBox from './BookBox';
 import { ContextStore } from '../context/Store';
 export default function Shelf(props) {
+
+  
   const topic_name = props.topic ;
  
   const store = useContext(ContextStore);
 
   const [searchItem,setSearchItem] = useState([topic_name]);
+let bool = false;
 
- 
+
 useEffect(()=>{
-
   
   const filterItems =  topic_name.filter((item)=>{
     
@@ -28,7 +30,8 @@ useEffect(()=>{
       setSearchItem(filterItems);
 
 
-},[store.searchText,topic_name])  
+
+},[store.searchText])  
 
 
   return (
@@ -36,15 +39,15 @@ useEffect(()=>{
     <>
     
     {/* Main Section */}
-    <div className='bg-[#473144] h-auto w-[100%] flex justify-center items-center'>
+    <div className='bg-[#3B3B50] h-auto w-[100%] flex justify-center items-center'>
 
 
 {/* Parent */}
-<div className='bg-white h-[100%] w-[80%] p-4 flex justify-evenly gap-6 items-center flex-wrap shadow-md'>
+<div className='bg-[#F8F6FB] h-[100%] w-[80%] p-4  pl-[57px] flex justify-start gap-6 items-center flex-wrap  shadow-sm shadow-white '>
 
 {(searchItem.map((_,index)=>(
 
-<BookBox name={searchItem[index]}/>
+<BookBox name={searchItem[index]} key={index} checkIcon={bool} />
 
 
 )))

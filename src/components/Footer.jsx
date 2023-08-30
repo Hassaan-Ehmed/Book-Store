@@ -5,7 +5,7 @@ export default function Footer() {
     <>
     
     {/* parent */}
-    <div className=' bg-[#AF1B3F] h-[23vw] w-[100%] flex justify-around items-center  shadow-inner  '>
+    <div className='  h-[23vw] w-[100%] flex justify-around items-center  shadow-inner bg-blend-color-burn'>
 
 <Listing list={{
         head:"Book Topics",

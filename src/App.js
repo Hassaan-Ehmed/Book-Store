@@ -11,23 +11,21 @@ import Self_Dev from './pages/Self_Dev';
 
 import Home from './pages/Home';
 import User from './pages/User';
+import Favourite from './pages/Favourite';
 
 
 function App() {
   return (
     <> 
-    {/* off-white > FFFDD0 || Maroon-type >> AF1B3F  || Purple-type >> 473144 */}
-
-
 
 <Router>
 
-<Navbar/>
-
-
+<Navbar/> 
 <Routes>
 
 <Route path={"/"} element={<Home/>}/>
+
+<Route  path='/Favourite' element={<Favourite/>}/>
 
 <Route path="/History" element={<History/>} />
 
