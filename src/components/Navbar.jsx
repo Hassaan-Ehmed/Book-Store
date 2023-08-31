@@ -40,7 +40,7 @@ onClick={function(){store.setSearchText(text);setText("")}}
 
 
 <div className="child3 w-[32vw] h-[100%] flex justify-center items-center gap-5 ">
-   <button className='bg-[#452372] text-white py-[0.6vw] px-[12px] rounded-[5px] shadow-2xl active:translate-y-[1.5px] transition-all md-'><Link to="/Favourite">Favourites</Link><span><FontAwesomeIcon icon={faHeart} style={{color:"red"}} /></span></button> 
+   <button className='bg-[#452372] text-white py-[0.6vw] px-[12px] rounded-[5px] shadow-2xl active:translate-y-[1.5px] transition-all md-'><Link to="/Favourite">Favourites </Link><span><FontAwesomeIcon icon={faHeart} style={{color:"red"}} /></span></button> 
     <button className='bg-[#452372] text-white  py-[0.6vw] px-[12px] rounded-[5px] shadow-2xl active:translate-y-[1.5px] transition-all'>Sign In <span><FontAwesomeIcon icon={faUser} /></span></button>
 </div>
 

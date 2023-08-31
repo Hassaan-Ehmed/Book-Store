@@ -34,7 +34,20 @@ export default function Favourite(){
 
                         
                         })
+let Books = FilteredBooks.filter((name,index)=>{
 
+    for(let x=0; x<store.favList.length; x++){
+
+
+        if(store.favList[index]!==FilteredBooks[x]) {
+            return true;
+        }else{
+            return false;
+        }
+    
+    }
+
+})
 
 return(
 <>
@@ -55,7 +68,7 @@ return(
 
 {
 
-FilteredBooks.length > 0 ? ( FilteredBooks.map((name,index)=>{
+Books.length > 0 ? ( Books.map((name,index)=>{
 
 return <BookBox name={name} key={index} checkIcon={bool}/>
 })

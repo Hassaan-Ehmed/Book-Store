@@ -12,6 +12,7 @@ import Self_Dev from './pages/Self_Dev';
 import Home from './pages/Home';
 import User from './pages/User';
 import Favourite from './pages/Favourite';
+import Download from './pages/Download';
 
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
 <Route path={"/"} element={<Home/>}/>
 
 <Route  path='/Favourite' element={<Favourite/>}/>
+
+<Route path='/Download' element={<Download/>}/>
 
 <Route path="/History" element={<History/>} />
 

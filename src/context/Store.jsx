@@ -21,7 +21,7 @@ let check_bool_fav = false;
 
 
 //For Delete Functionality
-const [forDelete,setForDelete] = useState(null);
+const [forDelete,setForDelete] = useState([]);
 
 
 
